@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2>Welcome to View user's page</h2>
+{{using}}
+<ol>
+    {% for i in using %}
+    <li>User Records:</li>
+    <ul>
+        <li>Name: {{i.name}}</li>
+        <li>Age: {{i.age}}</li>
+        <li>Place: {{i.place}}</li>
+         <li>Gender: {{i.gender}}</li>
+    </ul>
+     {% endfor %}
+</ol>
+
+
+
+<h2>User Records</h2>
+<table>
+    <tr>
+
+       <th>NAME</th>
+        <th>AGE</th>
+        <th>PLACE</th>
+        <th>GENDER</th>
+
+    </tr>
+{% for i in  using %}
+
+<tr>
+<td>{{i.name}}</td>
+<td>{{i.age}}</td>
+<td>{{i.place}}</td>
+<td>{{i.gender}}</td>
+
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}
